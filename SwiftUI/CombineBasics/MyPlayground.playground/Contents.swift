@@ -467,3 +467,92 @@ let cancellable23 = client.updates.sink { value in
 
 client.fetchWeather()
 */
+
+// Networking and error handling with combine
+
+/*
+struct Post: Codable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+}
+
+enum NetworkError: Error {
+    case badServerResponse
+}
+
+func fetchPosts() -> AnyPublisher<[Post], Error> {
+    let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+    
+    return URLSession.shared.dataTaskPublisher(for: url)
+        .tryMap { data, response in
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                throw NetworkError.badServerResponse
+            }
+            return data
+        }
+        .retry(3)
+        .decode(type: [Post].self, decoder: JSONDecoder())
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+}
+
+var cancellables23: Set<AnyCancellable> = []
+
+fetchPosts().sink(receiveCompletion: { completion in
+    switch completion {
+    case .finished:
+        print("Finished! We can update UI!")
+    case .failure(let error):
+        print(error)
+    }
+}, receiveValue: { posts in
+    print(posts)
+}).store(in: &cancellables23)
+
+*/
+
+// Combining multiple network requests
+
+struct MovieResponse: Codable {
+    let search: [Movie]
+    
+    private enum CodingKeys: String, CodingKey {
+        case search = "Search"
+    }
+}
+
+struct Movie: Codable {
+    let title: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case title = "Title"
+    }
+}
+
+func fetchMovies(_ searchTerm: String) -> AnyPublisher<MovieResponse, Error> {
+    let url = URL(string: "http://www.omdbapi.com/?s=\(searchTerm)&page=2&apikey=564727fa")!
+    
+    return URLSession.shared.dataTaskPublisher(for: url)
+        .map(\.data)
+        .decode(type: MovieResponse.self, decoder: JSONDecoder())
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+}
+
+var cancellable24: Set<AnyCancellable> = []
+
+Publishers.CombineLatest(fetchMovies("Batman"), fetchMovies("Superman"))
+    .sink { _ in
+        
+    } receiveValue: { movie1, movie2 in
+        movie1.search.map { movie in
+            print(movie.title)
+        }
+        movie2.search.map { movie in
+            print(movie.title)
+        }
+    }.store(in: &cancellable24)
+
