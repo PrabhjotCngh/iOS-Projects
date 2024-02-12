@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(service: HTTPClientFactory.create())
         }
     }
 }
