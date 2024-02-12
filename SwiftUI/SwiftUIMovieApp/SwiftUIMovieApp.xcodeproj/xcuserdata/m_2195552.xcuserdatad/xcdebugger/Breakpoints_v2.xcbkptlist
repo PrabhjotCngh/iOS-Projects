@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "104CC8DD-0BCA-4A4F-B08B-6103CE8FB2E0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64CE37B0-F7E7-466E-8359-65A7AF9A9B8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIMovieApp/Factories/HTTPClientFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "create()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64CE37B0-F7E7-466E-8359-65A7AF9A9B8F - 140815ed50328beb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUIMovieApp.HTTPClientFactory.create() -&gt; SwiftUIMovieApp.HTTPClientService"
+                  moduleName = "SwiftUIMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m_2195552/Documents/iOS-Projects/SwiftUI/SwiftUIMovieApp/SwiftUIMovieApp/Factories/HTTPClientFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "64CE37B0-F7E7-466E-8359-65A7AF9A9B8F - 140815ed50328beb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUIMovieApp.HTTPClientFactory.create() -&gt; SwiftUIMovieApp.HTTPClientService"
+                  moduleName = "SwiftUIMovieApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m_2195552/Documents/iOS-Projects/SwiftUI/SwiftUIMovieApp/SwiftUIMovieApp/Factories/HTTPClientFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "64CE37B0-F7E7-466E-8359-65A7AF9A9B8F - 1ef0dc5edcb165fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUIMovieAppTests.HTTPClientFactory.create() -&gt; SwiftUIMovieAppTests.HTTPClientService"
+                  moduleName = "SwiftUIMovieAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m_2195552/Documents/iOS-Projects/SwiftUI/SwiftUIMovieApp/SwiftUIMovieApp/Factories/HTTPClientFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "64CE37B0-F7E7-466E-8359-65A7AF9A9B8F - 1ef0dc5edcb165fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUIMovieAppTests.HTTPClientFactory.create() -&gt; SwiftUIMovieAppTests.HTTPClientService"
+                  moduleName = "SwiftUIMovieAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m_2195552/Documents/iOS-Projects/SwiftUI/SwiftUIMovieApp/SwiftUIMovieApp/Factories/HTTPClientFactory.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "404">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF0FD2BE-EAF2-4ADF-9FBF-7FFAE42B1887"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIMovieAppTests/SwiftUIMovieAppTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "setUpWithError()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
