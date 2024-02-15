@@ -8,10 +8,10 @@
 import Foundation
 
 class HTTPClientFactory {
-    static func create() -> HTTPClient {
+    static func create() -> HTTPClientService {
         let environment = ProcessInfo.processInfo.environment["Env"]
         if let environment, environment == "Test" {
-            //return mock class
+            return MockHttpClient()
         }
         return HTTPClient()
     }
